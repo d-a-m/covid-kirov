@@ -4,15 +4,6 @@ namespace App\Http\Controllers;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     /**
      * Show the application dashboard.
@@ -21,11 +12,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user = auth()->user();
-        $params = [
-            'api_token' => $user->api_token,
-        ];
-
-        return view('home', $params);
+        return view('index.home');
     }
 }
