@@ -31,31 +31,6 @@ h1 > span {
   }
 }
 
-.btn {
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06)!important;
-}
-
-.btn-default {
-  @extend .btn;
-  color: #333;
-  background-color: #eeeeee;
-  border: 5px solid #eeeeee;
-
-  @media screen and (min-width: 601px) {
-    &:hover {
-      background-color: #e0e0e0!important;
-      border: 5px solid #e0e0e0!important;
-    }
-  }
-
-  @media screen and (max-width: 600px) {
-    &:active {
-      background-color: #e0e0e0!important;
-      border: 5px solid #e0e0e0!important;
-    }
-  }
-}
-
 .white-wrapper {
   width: 100%;
   display: block;
@@ -90,72 +65,6 @@ h1 > span {
   to {
     -webkit-transform: rotate(360deg);
   }
-}
-
-@media screen and (min-width: 601px) {
-  .friends:hover {
-    background-color: #edf2f7;
-    border: 5px solid #edf2f7;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .friends:active {
-    background-color: #edf2f7;
-    border: 5px solid #edf2f7;
-  }
-}
-
-.listing-title {
-  font-size: 25px;
-  text-align: left !important;
-  color: #212529;
-  margin-bottom: 20px;
-}
-
-.alert h1 {
-  text-align: center !important;
-  font-size: 18px !important;
-  text-decoration: none;
-}
-
-.alert-vote {
-  color: #c05621;
-  padding: 1rem;
-  border-left: 4px solid;
-  border-color: #ed8936;
-  background-color: #fffaf0;
-}
-
-@media screen and (min-width: 601px) {
-  .items-container {
-      max-height: 380px;
-      //max-height: 100px;
-      //width: 100%;
-      overflow-y: auto;
-      -ms-overflow-style: none;  /* IE 10+ */
-      scrollbar-width: none; /* Firefox */
-  }
-
-  .items-container::-webkit-scrollbar { /* chrome based */
-    width: 3px;  /* ширина scrollbar'a */
-    background: transparent;  /* опционально */
-  }
-
-  .items-container::-webkit-scrollbar-track
-  {
-    -webkit-box-shadow: inset 0 0 6px #e0e0e0;
-    border-radius: 10px;
-    background-color: #e0e0e0;
-  }
-
-  .items-container::-webkit-scrollbar-thumb
-  {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px #9e9e9e;
-    background-color: #9e9e9e;
-  }
-
 }
 
 .content-center {

@@ -3,11 +3,7 @@
 
 namespace App\Http\Controllers\Api;
 
-
-use App\Helpers\SecureHelper;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Support\Facades\Response;
 
 class ApiController extends Controller
 {
@@ -18,50 +14,12 @@ class ApiController extends Controller
     protected $statusCode = 200;
 
     /**
-     * @return mixed
-     */
-    public function getStatusCode()
-    {
-        return $this->statusCode;
-    }
-
-
-    /**
-     * @param $statusCode
-     * @return $this
-     */
-    public function setStatusCode($statusCode = 200)
-    {
-        $this->statusCode = $statusCode;
-
-        return $this;
-    }
-
-    /**
      * @param string $message
      * @return JsonResponse
      */
     public function respondNotFound($message = 'Not found!')
     {
         return $this->setStatusCode(404)->respondWithError($message);
-    }
-
-    /**
-     * @param string $message
-     * @return JsonResponse
-     */
-    public function respondBadRequest($message = 'Bad request!')
-    {
-        return $this->setStatusCode(400)->respondWithError($message);
-    }
-
-    /**
-     * @param string $message
-     * @return JsonResponse
-     */
-    public function respondUnauthorized ($message = 'Unauthorized')
-    {
-        return $this->setStatusCode(401)->respondWithError($message);
     }
 
     /**
@@ -86,6 +44,43 @@ class ApiController extends Controller
     public function respond($data, $headers = [])
     {
         return Response::json($data, $this->getStatusCode(), $headers);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getStatusCode()
+    {
+        return $this->statusCode;
+    }
+
+    /**
+     * @param $statusCode
+     * @return $this
+     */
+    public function setStatusCode($statusCode = 200)
+    {
+        $this->statusCode = $statusCode;
+
+        return $this;
+    }
+
+    /**
+     * @param string $message
+     * @return JsonResponse
+     */
+    public function respondBadRequest($message = 'Bad request!')
+    {
+        return $this->setStatusCode(400)->respondWithError($message);
+    }
+
+    /**
+     * @param string $message
+     * @return JsonResponse
+     */
+    public function respondUnauthorized($message = 'Unauthorized')
+    {
+        return $this->setStatusCode(401)->respondWithError($message);
     }
 
     /**

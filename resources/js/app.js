@@ -29,7 +29,7 @@ const app = new Vue({
     store,
     computed: {
         ViewComponent() {
-            return require('./layouts/App.vue').default;
+            return require('./App.vue').default;
         }
     },
     render(h) {
