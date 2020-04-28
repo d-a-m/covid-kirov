@@ -5,9 +5,10 @@
  */
 
 import Vue from 'vue';
-
-import App from "./layouts/App.vue";
 import {store} from './store';
+import DynamicsChart from './components/DynamicsChart';
+import ChartTabs from "./components/Tabs/ChartTabs";
+import MapInfected from './components/MapInfected';
 
 /**
  * The following block of code may be used to automatically register your
@@ -25,14 +26,6 @@ import {store} from './store';
 
 const app = new Vue({
     el: '#app',
-    components: { App },
+    components: { DynamicsChart, ChartTabs, MapInfected },
     store,
-    computed: {
-        ViewComponent() {
-            return require('./App.vue').default;
-        }
-    },
-    render(h) {
-        return h(this.ViewComponent)
-    }
 });

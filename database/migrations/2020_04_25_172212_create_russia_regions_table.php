@@ -19,6 +19,7 @@ class CreateRussiaRegionsTable extends Migration
             $table->string('slug');
             $table->integer('total')->unsigned()->default(0);
             $table->integer('new')->unsigned()->default(0);
+            $table->string('coords')->default('');
 
             $table->timestamps();
         });

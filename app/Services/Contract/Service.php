@@ -20,8 +20,8 @@ abstract class Service implements ServiceInterface
 
     /**
      * Service constructor.
-     * @param  string  $modelName
-     * @param  Repository  $repository
+     * @param string $modelName
+     * @param Repository $repository
      */
     public function __construct(string $modelName, Repository $repository)
     {

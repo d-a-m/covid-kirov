@@ -1,0 +1,40 @@
+.header__menu {
+  background-color: #eee;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1);
+}
+
+.logotype {
+  display: flex;
+  flex-direction: row;
+
+  & .logotype__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+    & img {
+      height: 32px;
+      width: 32px;
+    }
+  }
+
+  & .logotype__title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & .logotype__title-name {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
+
+  & .logotype__title-description {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+  }
+}

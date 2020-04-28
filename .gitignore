@@ -11,3 +11,5 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+covid.sql
+/app/Helpers/YandexMaps.php

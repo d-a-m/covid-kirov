@@ -14,6 +14,6 @@ class IndexController extends Controller
             ]
         ];
 
-        return view('admin.front.index', $params);
+        return view('admin.index.index', $params);
     }
 }

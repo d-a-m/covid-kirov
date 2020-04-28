@@ -13,11 +13,6 @@ class SEO extends Model
     protected $table = "seo";
 
     /**
-     * @var string
-     */
-    public static $uploadDirectory = 'uploads/seo/';
-
-    /**
      * @var array
      */
     protected $guarded = ['id', 'created_at', 'updated_at'];
@@ -63,63 +58,5 @@ class SEO extends Model
         $meta['content'] = '';
 
         return $meta;
-    }
-
-    /**
-     * Замена шаблонов в строках
-     * @param $data
-     * @return mixed
-     */
-    private static function replaceTags($data)
-    {
-
-        /**
-         *  %current_year% - текущий год
-         *  %current_year_plus_one% - текущий год + 1
-         */
-
-        preg_match_all('/{(.*?)}/', $data, $result);
-
-        if (count($result) > 0) {
-            foreach ($result[1] as $setting) {
-                $setting = explode('.', $setting);
-
-                if ($setting[0] == 'city') {
-                    $url_city = explode('/', url()->current())[3];
-
-                    // Есть указание на падеж города
-                    if (isset($setting[1])) {
-                        $city = config()->get('cities.' . $url_city)['cases'][$setting[1]];
-                        $data = str_replace('{' . $setting[0] . '.' . $setting[1] . '}', $city, $data);
-                    } else {
-                        $data = str_replace('{' . $setting[0] . '}', $url_city, $data);
-                    }
-
-
-                }
-            }
-        }
-
-        if (strpos($data, '%current_year%') !== false) {
-            $data = str_replace('%current_year%', now()->year, $data);
-        }
-
-        if (strpos($data, '%current_year_plus_one%') !== false) {
-            $data = str_replace('%current_year_plus_one%', now()->year + 1, $data);
-        }
-
-        if (strpos($data, '%current_year_plus_two%') !== false) {
-            $data = str_replace('%current_year_plus_two%', now()->year + 2, $data);
-        }
-
-        if (strpos($data, '%current_year_plus_three%') !== false) {
-            $data = str_replace('%current_year_plus_three%', now()->year + 3, $data);
-        }
-
-        if (strpos($data, '%current_year_plus_four%') !== false) {
-            $data = str_replace('%current_year_plus_four%', now()->year + 3, $data);
-        }
-
-        return $data;
     }
 }

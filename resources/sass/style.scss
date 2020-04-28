@@ -1,27 +1,10 @@
-h1 {
-  font-weight: bold;
-  margin-top: 20px;
-  //color: white;
-}
-
-h1 > span {
-  text-transform: uppercase;
-  font-size: 35px;
-}
+@import "partials/header";
+@import "partials/info-block";
 
 .container {
-  max-width: 630px;
+  max-width: 940px;
   height: 100%;
   padding: 15px 30px;
-
-  /* Высота статус-бара в iOS 10 */
-  margin: 60px auto 0;
-
-  /* Высота статус-бара в iOS 11.0 */
-  margin: calc(60px + constant(safe-area-inset-top)) auto 0;
-
-  /* Высота статус-бара в iOS 11+ */
-  margin: calc(60px + env(safe-area-inset-top)) auto 0;
 }
 
 @media screen and (min-width: 480px) {

@@ -18,7 +18,7 @@ class CreateRussiaTable extends Migration
 
             $table->integer('infected')->unsigned()->default(0);
             $table->integer('recovered')->unsigned()->default(0);
-            $table->integer('died')->unsigned()->default(0);
+            $table->integer('dead')->unsigned()->default(0);
             $table->text('chart_total')->nullable();
             $table->text('chart_diff')->nullable();
 
