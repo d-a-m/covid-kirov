@@ -11358,7 +11358,6 @@ a.text-dark:focus {
 
 .header__menu {
   background-color: #eee;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .logotype {
@@ -11367,6 +11366,7 @@ a.text-dark:focus {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
           flex-direction: row;
+  padding-left: 0;
 }
 
 .logotype .logotype__icon {
@@ -11404,6 +11404,36 @@ a.text-dark:focus {
   margin: 0;
   padding: 0;
   font-size: 14px;
+}
+
+.menu {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+@media (max-width: 480px) {
+  .menu {
+    display: none;
+  }
+}
+
+.menu a {
+  padding: 7px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  color: #212529;
+}
+
+.menu a:hover {
+  border-bottom: 2px solid #bebebe;
+  text-decoration: none;
 }
 
 section {
@@ -11498,6 +11528,70 @@ section .region .region__new {
   width: 65px;
   min-width: 65px;
   box-sizing: initial;
+}
+
+section .phone {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.self-isolation {
+  background-color: #E3342F;
+  border: 1px solid #E3352C;
+  color: white;
+  text-align: center;
+}
+
+.self-isolation h2 {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.self-isolation p {
+  margin: 0;
+}
+
+.organization {
+  display: -webkit-box;
+  display: flex;
+  background: #fff;
+  border-radius: 7px;
+  border: 1px solid #e7e8ec;
+  padding: 10px 15px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 480px) {
+  .organization {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.organization .organization__logotype {
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.organization .organization__logotype img {
+  width: 70px;
+  height: auto;
+}
+
+.organization .organization__name {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  font-size: 14px;
+  line-height: 1;
+  padding: 7px;
+  color: #212529;
+}
+
+.organization__link:hover {
+  text-decoration: none;
 }
 
 .container {

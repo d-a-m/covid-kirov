@@ -39,13 +39,18 @@ class HomeController extends Controller
             'infected' => $regionCommonData->infected,
             'recovered' => $regionCommonData->recovered,
             'dead' => $regionCommonData->dead,
+            'tested' => $regionCommonData->tested,
+            'isolated' => $regionCommonData->isolated,
+            'updated_at' => $regionCommonData->updated_at
         ];
+
 
         $params['russia'] = [
             'infectedChart' => ChartHelper::getInfectedChartData($russianData, 'chart_total'),
             'infected' => $russianData->infected,
             'recovered' => $russianData->recovered,
             'dead' => $russianData->dead,
+            'updated_at' => $russianData->updated_at
         ];
 
         $params['world'] = [
@@ -53,6 +58,7 @@ class HomeController extends Controller
             'infected' => $worldData->infected,
             'recovered' => $worldData->recovered,
             'dead' => $worldData->dead,
+            'updated_at' => $worldData->updated_at
         ];
 
         $params['regions']= [
