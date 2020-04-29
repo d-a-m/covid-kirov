@@ -1,6 +1,6 @@
 <template>
     <div class="w-100">
-        <apexchart type="bar" height="300" width="100%" :options="chartOptions" :series="series"></apexchart>
+        <apexchart type="bar" height="280" width="100%" :options="chartOptions" :series="series"></apexchart>
     </div>
 </template>
 
@@ -65,12 +65,6 @@
                     },
                     dataLabels: {
                         enabled: false,
-                        offsetY: -20,
-                        style: {
-                            fontSize: '12px',
-                            fontFamily: 'Montserrat',
-                            colors: ["#304758"]
-                        }
                     },
                     xaxis: {
                         categories: [],
@@ -107,9 +101,6 @@
                         labels: {
                             show: false,
                         },
-                        formatter: (value) => {
-                            return value + '%';
-                        }
                     },
                 },
             }

@@ -185,13 +185,7 @@ __webpack_require__.r(__webpack_exports__);
           }
         },
         dataLabels: {
-          enabled: false,
-          offsetY: -20,
-          style: {
-            fontSize: '12px',
-            fontFamily: 'Montserrat',
-            colors: ["#304758"]
-          }
+          enabled: false
         },
         xaxis: {
           categories: [],
@@ -227,9 +221,6 @@ __webpack_require__.r(__webpack_exports__);
           },
           labels: {
             show: false
-          },
-          formatter: function formatter(value) {
-            return value + '%';
           }
         }
       }
@@ -318,6 +309,7 @@ __webpack_require__.r(__webpack_exports__);
       center: [58.603581, 49.667978],
       options: {
         suppressMapOpenBlock: true,
+        restrictMapArea: true,
         minZoom: 1
       },
       regions: []
@@ -480,7 +472,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".tabs li[data-v-943abe94] {\n  cursor: pointer;\n  display: inline;\n  list-style-type: none;\n  border-bottom: 1px solid #e7e8ec;\n  padding: 10px 15px;\n}\n.tabs li[data-v-943abe94]:hover {\n  border-bottom: 1px solid #333;\n}\n.tabs li.is-active[data-v-943abe94] {\n  border-bottom: 1px solid #333;\n}", ""]);
+exports.push([module.i, ".tabs[data-v-943abe94] {\n  padding: 0;\n  margin: 0 0 20px 0;\n}\n.tabs li[data-v-943abe94] {\n  cursor: pointer;\n  display: inline;\n  list-style-type: none;\n  border-bottom: 1px solid #e7e8ec;\n  padding: 10px 15px;\n}\n.tabs li[data-v-943abe94]:hover {\n  border-bottom: 1px solid #333;\n}\n@media (max-width: 768px) {\n.tabs li[data-v-943abe94] {\n    padding: 5px;\n}\n}\n.tabs li.is-active[data-v-943abe94] {\n  border-bottom: 1px solid #333;\n}", ""]);
 
 // exports
 
@@ -1925,7 +1917,7 @@ var render = function() {
       _c("apexchart", {
         attrs: {
           type: "bar",
-          height: "300",
+          height: "280",
           width: "100%",
           options: _vm.chartOptions,
           series: _vm.series
@@ -1966,7 +1958,7 @@ var render = function() {
         {
           attrs: {
             coords: this.center,
-            zoom: 3,
+            zoom: 2,
             controls: [],
             options: this.options
           },

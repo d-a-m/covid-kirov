@@ -61,6 +61,8 @@
 
 <style scoped lang="scss">
     .tabs {
+        padding: 0;
+        margin: 0 0 20px 0;
 
         & li {
             cursor: pointer;
@@ -71,6 +73,10 @@
 
             &:hover {
                 border-bottom: 1px solid #333;
+            }
+
+            @media (max-width: 768px) {
+                padding: 5px;
             }
         }
 

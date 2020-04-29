@@ -11480,10 +11480,16 @@ section .region .region__city {
           flex-grow: 1;
 }
 
-section .region .region__total {
+section .region .region__value {
   flex-shrink: 0;
-  padding-right: 7px;
+  padding-right: 15px;
   text-align: right;
+}
+
+@media (max-width: 768px) {
+  section .region .region__value {
+    padding-right: 0;
+  }
 }
 
 section .region .region__new {
@@ -11491,7 +11497,6 @@ section .region .region__new {
   color: #939393;
   width: 65px;
   min-width: 65px;
-  padding-right: 7px;
   box-sizing: initial;
 }
 

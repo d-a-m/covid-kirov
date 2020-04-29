@@ -219,31 +219,20 @@
                 </div>
 
                 <div class="col-12 mt-3">
-                    <?php
-                        $numOfCols = 2;
-                        $rowCount = 0;
-                        $bootstrapColWidth = 12 / $numOfCols;
-                    ?>
                     <div class="region__wrapper">
-                        <?php
-                            foreach ($regions['infectedMap']->reverse() as $region) {
-                        ?>
+                        @foreach ($regions['infectedMap']->reverse() as $region)
                             <div class="region">
                                 <div class="region__city">
                                     {{ $region['slug'] }}
                                 </div>
-                                <div class="region__total">
-                                    {{ $region['total'] }}
-                                </div>
-                                <div class="region__new">
-                                    + {{ $region['new'] }}
+                                <div class="region__value">
+                                    {{ number_format($region['total'], 0, ',', ' ') }}
+                                    <div class="region__new">
+                                        + {{ number_format($region['new'], 0, ',', ' ') }}
+                                    </div>
                                 </div>
                             </div>
-
-
-                        <?php
-                        }
-                        ?>
+                        @endforeach
                     </div>
                 </div>
             </div>

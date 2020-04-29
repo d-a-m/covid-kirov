@@ -19,7 +19,7 @@ class HomeController extends Controller
     public function index()
     {
         $regionCommonDataRepository = (new RegionCommonDataRepository(RegionCommonData::class));
-        $russiaReionsRepository = (new RussiaRegionsDataRepository(RussiaRegionsData::class));
+        $russiaRegionsRepository = (new RussiaRegionsDataRepository(RussiaRegionsData::class));
         $russiaRepository = (new RussiaDataRepository(RussiaData::class));
         $worldRepository = (new RussiaDataRepository(WorldData::class));
 
@@ -56,7 +56,7 @@ class HomeController extends Controller
         ];
 
         $params['regions']= [
-            'infectedMap' => $russiaReionsRepository->getAll()->get()
+            'infectedMap' => $russiaRegionsRepository->getAll()->get()
         ];
 
         return view('index.home', $params);

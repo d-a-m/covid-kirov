@@ -2,7 +2,7 @@
     <div class="map">
         <yandex-map
             :coords="this.center"
-            :zoom="3"
+            :zoom="2"
             :controls="[]"
             :options="this.options"
             @boundschange="boundsChange"
@@ -39,6 +39,7 @@
                 center: [58.603581, 49.667978],
                 options: {
                     suppressMapOpenBlock: true,
+                    restrictMapArea: true,
                     minZoom: 1
                 },
                 regions: [],
