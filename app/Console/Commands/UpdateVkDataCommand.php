@@ -52,29 +52,29 @@ class UpdateVkDataCommand extends Command
                 ->getContents()
         );
 
-//        $world = $response->world;
-//        if ($world) {
-//            WorldData::query()->truncate();
-//            WorldData::create([
-//                'infected' => $world->infected[0],
-//                'recovered' => $world->recovered[0],
-//                'dead' => $world->dead[0],
-//                'chart_total' => join(';', $world->chart_total->data),
-//                'chart_diff' => join(';', $world->chart_diff->data),
-//            ]);
-//        }
-//
-//        $russia = $response->russia;
-//        if ($russia) {
-//            RussiaData::query()->truncate();
-//            RussiaData::create([
-//                'infected' => $russia->infected[0],
-//                'recovered' => $russia->recovered[0],
-//                'dead' => $russia->dead[0],
-//                'chart_total' => join(';', $russia->chart_total->data),
-//                'chart_diff' => join(';', $russia->chart_diff->data),
-//            ]);
-//        }
+        $world = $response->world;
+        if ($world) {
+            WorldData::query()->truncate();
+            WorldData::create([
+                'infected' => $world->infected[0],
+                'recovered' => $world->recovered[0],
+                'dead' => $world->dead[0],
+                'chart_total' => join(';', $world->chart_total->data),
+                'chart_diff' => join(';', $world->chart_diff->data),
+            ]);
+        }
+
+        $russia = $response->russia;
+        if ($russia) {
+            RussiaData::query()->truncate();
+            RussiaData::create([
+                'infected' => $russia->infected[0],
+                'recovered' => $russia->recovered[0],
+                'dead' => $russia->dead[0],
+                'chart_total' => join(';', $russia->chart_total->data),
+                'chart_diff' => join(';', $russia->chart_diff->data),
+            ]);
+        }
 
         $russiaRegions = $response->russia_top;
 

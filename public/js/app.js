@@ -228,8 +228,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {
     this.prepareColors();
-    this.prepareDataName();
     this.prepareDataSeries();
+    this.prepareDataName();
   },
   methods: {
     prepareColors: function prepareColors() {

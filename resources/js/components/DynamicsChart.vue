@@ -107,8 +107,8 @@
         },
         created() {
             this.prepareColors();
-            this.prepareDataName();
             this.prepareDataSeries();
+            this.prepareDataName();
         },
         methods: {
             prepareColors() {
@@ -121,6 +121,7 @@
 
             prepareDataSeries() {
                 const chartData = JSON.parse(this.chart);
+
                 chartData.map((item) => {
                     this.series[0].data.push(item[this.item_key]);
                     this.chartOptions.xaxis.categories.push(
