@@ -2,8 +2,7 @@
 
 namespace App\Console;
 
-use App\Console\Commands\GenerateDailyWords;
-use App\Console\Commands\UpdateRating;
+use App\Console\Commands\UpdateVkDataCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -15,13 +14,15 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
+        UpdateVkDataCommand::class
     ];
 
     /**
-     * @param Schedule $schedule
+     * @param  Schedule  $schedule
      */
     protected function schedule(Schedule $schedule)
     {
+        $schedule->command('vk:update')->hourly();
     }
 
     /**
