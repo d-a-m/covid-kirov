@@ -20,7 +20,7 @@
         </div>
 
         <div class="col-4">
-            @include('forms.admin.number', ['key' => 'died', 'label' => 'Умершие'])
+            @include('forms.admin.number', ['key' => 'dead', 'label' => 'Умершие'])
         </div>
 
         <div class="col-4">

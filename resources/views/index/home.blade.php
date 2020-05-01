@@ -26,14 +26,14 @@
         </div>
 
         <section id="alert" class="self-isolation mb-4">
-            <h2>Режим самоизоляции в Кирове продлён до <u>30 апреля</u></h2>
-            <p>По данным постановления Правительства Кировской области №122-П от 25 марта 2020 года</p>
+            <h2>Режим самоизоляции в Кирове продлён до <u>11 мая</u></h2>
+            <p>По данным постановления Правительства Кировской области №222-П от 30 апреля 2020 года</p>
         </section>
 
         <section id="operative-data" class="mb-4">
             <h2 class="mb-3">Последние новости</h2>
 
-            <p>На сегодня, {{ \App\Helpers\DateHelper::getRussianToday() }}, в Кировской области, @if($kirov['infected']) было зафиксировано {{ number_format($kirov['infected'], 0, ',', ' ') }} @else не было зафиксировано @endif случаев заражения новой коронавирусной инфекцией (COVID - 19), смертей – {{ number_format($kirov['dead'], 0, ',', ' ') }}, выздоровевших – {{ number_format($kirov['recovered'], 0, ',', ' ') }}.</p>
+            <p>На сегодня, {{ \App\Helpers\DateHelper::getRussianToday() }}, в Кировской области, @if($kirov['infected']) было зафиксировано {{ number_format($kirov['infected'], 0, ',', ' ') }} @else не было зафиксировано @endif {{ \App\Helpers\StringHelper::getNumEnding($kirov['infected'], ['случай','случая','случаев']) }} заражения новой коронавирусной инфекцией (COVID - 19), смертей – {{ number_format($kirov['dead'], 0, ',', ' ') }}, выздоровевших – {{ number_format($kirov['recovered'], 0, ',', ' ') }}.</p>
             <p>Во всем мире заразилось {{ number_format($world['infected'], 0, ',', ' ') }} {{ \App\Helpers\StringHelper::getNumEnding($world['infected'], ['человек','человека','человек']) }}, {{ number_format($world['recovered'], 0, ',', ' ') }} {{ \App\Helpers\StringHelper::getNumEnding($world['recovered'], ['человек','человека','человек']) }} выздоровело и {{ number_format($world['dead'], 0, ',', ' ') }} {{ \App\Helpers\StringHelper::getNumEnding($world['dead'], ['человек','человека','человек']) }} погибло от коронавируса.</p>
         </section>
 
@@ -270,6 +270,7 @@
     </footer>
 
     <script src="{{ asset('js/app.js') }}"></script>
+    <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(62483320, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/62483320" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 
 </body>
 </html>

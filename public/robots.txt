@@ -1,2 +1,7 @@
 User-agent: *
-Disallow:
+Disallow: /admin
+Disallow: /public
+
+Host: https://coronavirus-kirov.ru
+
+

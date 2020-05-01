@@ -27,7 +27,7 @@ class RegionCommonDataRequest extends FormRequest
             'date' => 'required|date',
             'infected' => 'required|numeric',
             'recovered' => 'required|numeric',
-            'died' => 'required|numeric',
+            'dead' => 'required|numeric',
             'tested' => 'required|numeric',
             'isolated' => 'required|numeric',
         ];
