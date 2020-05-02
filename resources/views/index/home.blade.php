@@ -235,11 +235,8 @@
                         <p class="text-right text-muted small mt-3">
                             Время обновления: {{ \App\Helpers\DateHelper::getRussianDate($region['updated_at']) }} <br />
                             Источники данных:
-<<<<<<< HEAD
+
                             <a href="https://covid19.rosminzdrav.ru/" target="_blank" rel="nofollow" class="text-muted">Минздрав РФ</a>,
-=======
-                            <a href="https://covid19.rosminzdrav.ru/" target="_blank" rel="nofollow" class="text-muted">Минздраф РФ</a>,
->>>>>>> 481bcdc44728550b991e42a64af45380a111bdc7
                             <a href="https://vk.com/" target="_blank" rel="nofollow" class="text-muted">vk.com</a>
                         </p>
                     </div>
