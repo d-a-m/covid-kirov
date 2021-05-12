@@ -30,7 +30,7 @@
     "dependencies": {
         "apexcharts": "^3.19.0",
         "moment": "^2.24.0",
-        "swiper": "^5.2.1",
+        "swiper": "^6.5.1",
         "tailwindcss": "^1.1.4",
         "vue-apexcharts": "^1.5.3",
         "vue-awesome-swiper": "^3.1.3",
